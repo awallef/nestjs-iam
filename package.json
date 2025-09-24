@@ -1,6 +1,6 @@
 {
   "name": "@awallef/nestjs-iam",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "NestJS Identity and Access Management (IAM) library with comprehensive authentication and authorization features",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
