@@ -1,0 +1,83 @@
+{
+  "name": "@awallef/nestjs-iam",
+  "version": "1.1.0",
+  "description": "NestJS Identity and Access Management (IAM) library with comprehensive authentication and authorization features",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nestjs-iam-cli": "dist/cli/schema-cli.js"
+  },
+  "files": [
+    "dist/**/*",
+    "schema/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "build:cli": "tsc src/cli/schema-cli.ts --outDir dist --target es2020 --module commonjs --esModuleInterop --allowSyntheticDefaultImports",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "nestjs",
+    "iam",
+    "identity",
+    "access-management",
+    "authentication",
+    "authorization",
+    "typescript"
+  ],
+  "author": "Antoine Wallefire <your-email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awallef/nestjs-iam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/awallef/nestjs-iam/issues"
+  },
+  "homepage": "https://github.com/awallef/nestjs-iam#readme",
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/typeorm": "^10.0.0",
+    "class-transformer": "^0.5.0",
+    "class-validator": "^0.14.0",
+    "typeorm": "^0.3.0",
+    "reflect-metadata": "^0.2.0"
+  },
+  "dependencies": {
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.4.4",
+    "@nestjs/core": "^10.4.4",
+    "@nestjs/testing": "^10.4.4",
+    "@nestjs/typeorm": "^10.0.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.4",
+    "@types/pg": "^8.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "eslint": "^9.10.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "reflect-metadata": "^0.2.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.20",
+    "typescript": "^5.5.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
